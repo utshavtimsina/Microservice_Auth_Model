@@ -1,0 +1,15 @@
+
+spring:
+  application:
+    name: product_category_service
+
+security:
+  oauth2:
+    resource:
+      token-info-uri: http://localhost:9000/oauth/check_token
+    client:
+      client-id: web
+      client-secret: pin
+  jwt:
+    public-key: classpath:public.txt
+#management.endpoint.shutdown.enabled=true

@@ -1,0 +1,30 @@
+server:
+  port: 9000
+
+spring:
+  security:
+    user:
+      name: kirsh
+      password: krish123
+      roles:
+        - ADMIN
+        - USER
+
+security:
+  oauth2:
+    client:
+      client-id: mobile
+      client-secret: pin
+      access-token-validity-seconds: 3600
+      authorized-grant-types:
+        - password
+        - refresh_token
+        - authorization_code
+        - client_credentials
+      scope:
+        - READ
+        - WRITE
+    authorization:
+      check-token-access: permitAll
+
+
